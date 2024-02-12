@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    font-family: 'Bebas Neue', sans-serif;
+    padding-top: 120px;
+    padding-bottom: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 85%;
+    top: 0;
+    left: 10%;
+}
+.logo{
+    width: 170px;
+    height: 100px;
+    position: relative;
+    left: -100px;
+    top: 10px;
+}
+.logo img{
+    width: 105%;
+    height: 70%;
+}
+.navbar {
+    display: flex;
+    gap: 60px; 
+    justify-content: center; 
+    padding: 0; 
+    list-style: none; 
+}
+.navbar li {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.navbar a {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    transition: all .55s ease;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color:black;
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px 15px;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    transform-style: preserve-3d;
+}
+.container .box{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    margin: 40px;
+    background: white;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+.container .box::before{
+    content: 'NIKE';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 6em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .box::after{
+    content: 'SHOES';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 5em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .box:hover::before, 
+.container .box:hover::after{
+    opacity: 0.04;
+}
+.container .box .name{
+    position: absolute;
+    font-size: 40px;
+    -webkit-text-stroke: 0.1px black;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: black;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+    
+}
+.container .box:hover .name{
+    top: 40px;
+    opacity: 1;
+}
+.container .box .buy{
+    position: absolute;
+    border: solid 0.2px black;
+    font-size: 20px;
+    bottom: 0;
+    left: 170px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: black;
+    background: #333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+    font-weight: 200;
+}
+.container .box:hover .buy{
+    bottom: 30px;
+    opacity: 1;
+}
+.container .box .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: #fff;
+    transform-style: preserve-3d;
+    z-index: 9;
+    opacity: 1;
+    transform: translate3d(-50%,-50%,50px)
+}
+.container .box .product{
+position: absolute;
+top: 50%;
+left: 50%;
+max-width: 350px;
+transition: 0.5s;
+z-index: 15;
+transform-style: preserve-3d;
+transform: translate3d(-50%,-50%,50px) rotate(-15deg);
+}
+.container .box:hover .product{
+    transform: translate3d(-50%,-50%,100px) rotate(-15deg);
+}
+.container .box:nth-child(1) .circle,
+.container .box:nth-child(1) .buy{
+    background: rgb(220, 184, 2);
+}
+.container .box:nth-child(2) .circle,
+.container .box:nth-child(2) .buy{
+    background: rgb(1, 92, 1);
+}
+.container .box:nth-child(3) .circle,
+.container .box:nth-child(3) .buy{
+    background: rgb(206, 3, 3);
+}
+.container .box:nth-child(4) .circle,
+.container .box:nth-child(4) .buy{
+    background: rgb(133, 76, 18);
+}
+.container .box:nth-child(5) .circle,
+.container .box:nth-child(5) .buy{
+    background: rgb(4, 150, 164);
+}
+.container .box:nth-child(6) .circle,
+.container .box:nth-child(6) .buy{
+    background: rgb(255, 111, 0);
+}
+
+.container .box:nth-child(1) .name{
+    color: rgb(220, 184, 2);
+}
+.container .box:nth-child(2) .name{
+    color: rgb(1, 92, 1);
+}
+.container .box:nth-child(3) .name{
+    color: rgb(206, 3, 3);
+}
+.container .box:nth-child(4) .name{
+    color: rgb(133, 76, 18);
+}
+.container .box:nth-child(5) .name{
+    color: rgb(4, 150, 164);
+}
+.container .box:nth-child(6) .name{
+    color: rgb(255, 111, 0);
+}
+
+.button a
+{
+    position: absolute;
+   top: 125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 50px;
+    background: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+    font-family: verdana;
+    letter-spacing: 4px;
+}
+
+.button a:before,
+.button a:after,
+span:before,
+span:after
+{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    transition: 1s;
+    mix-blend-mode: hue;
+}
+
+.button a:before
+{
+    top: -2px;
+    left: -2px
+}
+.button a:after
+{
+    top: -2px;
+    right: -2px;
+}
+span:before
+{
+    bottom: -2px;
+    left: -2px
+}
+span:after
+{
+    bottom: -2px;
+    right: -2px
+}
+
+.button a:hover:before,
+.button a:hover:after,
+.button a:hover span:before,
+.button a:hover span:after
+{
+    width: calc( 220px/2 );
+    height: calc( 50px/2 )
+}
+footer{
+    position: absolute;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: -65%;
+}
+footer .social_icon,
+footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;   
+}
+footer .social_icon li,
+footer .menu li{
+    list-style: none;
+}
+footer .social_icon li a{
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .menu li a{
+    font-size: 1.4em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s; 
+    text-decoration: none;
+    opacity: 0.65;
+}
+footer .social_icon li a:hover{
+    transform: translateY(-10px)
+}
+footer .menu li a:hover{
+    opacity: 1;
+}
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(./wave.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 8s linear infinite;
+}
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_2 8s linear infinite;
+}
+footer .wave#wave3{
+    z-index: 998;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 4s linear infinite;
+}
+footer .wave#wave4{
+    z-index: 997;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_2 4s linear infinite;
+}
+@keyframes animateWave{
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+@keyframes animateWave_2{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}

@@ -1,0 +1,208 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 85%;
+    color: white;
+    margin: 0 auto;
+    transition: 0.2s background ease-in-out;
+    overflow: hidden;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 85%;
+    z-index: 99999;
+}
+.logo{
+    width: 170px;
+    height: 100px;
+    position: relative;
+    left: -100px;
+    top: 10px;
+}
+.logo img{
+    width: 105%;
+    height: 70%;
+}
+.navbar {
+    display: flex;
+    gap: 60px; 
+    justify-content: center; 
+    padding: 0; 
+    list-style: none; 
+}
+.navbar li {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.navbar a {
+    font-family: 'Bebas Neue', sans-serif;
+    color: black;
+    font-size: 30px;
+    font-weight: bolder;
+    transition: all .55s ease;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color:white;
+    background-color: black;
+    border-radius: 30px;
+    padding: 5px 15px;
+}
+.navbar a.white-text{
+    color: #fff;
+}
+.navbar a.white-text:hover{
+    color: black;
+    background-color: #fff;
+}
+.navbar a.black-text{
+    color: #000;
+}
+.navbar a.black-text:hover{
+    color: #fff;
+    background-color: #000;
+}
+
+.circle1, .circle2 {
+    position: absolute;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    z-index: 1;
+}
+
+.circle1 {
+    top: 30%;
+    right: 10vw; 
+    width: 30vw; 
+    height: 50vh;
+    background-color: black;
+}
+
+.circle2 {
+    top: 10vh; 
+    left: -10vw; 
+    width: 55vw; 
+    height: 100vh;
+    background-color: #911116;
+}
+
+.text {
+    position: absolute; 
+    top: 20%;
+    left: 3%; 
+    color: white;
+    z-index: 3;
+    width: 30%; 
+    text-align: justify;
+    hyphens: auto;
+    font-size: 22px; 
+}
+.text h1{
+    font-family: 'Bebas Neue', sans-serif;
+    position: relative;
+    font-size: 3.5em;
+    font-weight: bolder;
+    left: 60px;
+}
+.text h2 {
+    font-family: 'Courgette', cursive;
+    position: relative;
+    font-size: 1.2em; 
+    font-weight: 500;
+    left: 40px;
+}
+.text p{
+    font-family: 'Englebert', cursive;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+.red-jordan {
+    transform: scale(0.4) rotate(-15deg); 
+    position: absolute;
+    right: -30%; 
+    top: -10%;
+    z-index: 4;
+}
+.versions{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+    z-index: 999999;
+}
+.version{
+    width: 90px;
+    height: 110px;
+    margin: 0px 30px;
+    transition: 0.2s all ease-in;
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    right: -26%;
+}
+.version img{
+    width: 170%;
+    height: 90%;
+}
+.version:hover{
+    position: relative;
+    transition: 0.3s all ease-in;
+    top: -10px;
+}
+.button{
+    position: relative;
+    padding: 10px 20px;
+    background-color: black;
+    border-radius: 20px;
+    width: fit-content;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.2s all ease-in;
+    left: 35%;
+    top: 10px;
+}
+.button:hover{
+    transform: scale(1.1);    
+}
+.button a{
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+.active{
+    position: relative;
+    top: -10px;
+    animation: activeProduct ease-in-out infinite 1s;
+}
+@keyframes activeProduct{
+    0%{
+        top: -10px;
+    }
+    50%{
+        top: -5px;
+    }
+    100%{
+        top: -10px;
+    }
+}
+
+
+
+
+

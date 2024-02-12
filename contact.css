@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 85%;
+    top: 0;
+    left: 10%;
+}
+.logo{
+    width: 170px;
+    height: 100px;
+    position: relative;
+    left: -100px;
+    top: 20px;
+}
+.logo img{
+    width: 105%;
+    height: 70%;
+}
+.navbar {
+    display: flex;
+    gap: 60px; 
+    justify-content: center; 
+    padding: 0; 
+    list-style: none; 
+}
+.navbar li {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.navbar a {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    transition: all .55s ease;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color:white;
+    background-color: #a4730f;
+    border-radius: 30px;
+    padding: 5px 15px;
+    border: 3px solid black;
+}
+.svg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 10%;
+    z-index: -1; 
+}
+#blob1, #blob3, #blob5, #blob7, #blob9, #blob11{
+    visibility: hidden;
+}
+section{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+padding: 20px;
+width: 100%;
+}
+.container{
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+}
+.container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.05) ;
+    pointer-events: none;
+    transform: skewX(-15deg);
+}
+.container h2{
+    font-family: 'Bebas Neue', sans-serif;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.container .row100{
+    font-family: 'Englebert', cursive;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.container .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+}
+.container .row100 .col .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+.container .row100 .col .inputBox input,
+.container .row100 .col .inputBox textarea{
+position: absolute;
+width: 100%;
+height: 100%;
+background: transparent;
+box-shadow: none;
+border: none;
+outline: none;
+font-size: 15px;
+padding: 0 10px;
+z-index: 1;
+color: black;
+}
+.container .row100 .col .inputBox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .row100 .col .inputBox input:focus + .text,
+.container .row100 .col .inputBox input:valid + .text,
+.container .row100 .col .inputBox textarea:focus + .text,
+.container .row100 .col .inputBox textarea:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+.container .row100 .col .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.container .row100 .col .inputBox input:focus ~ .line,
+.container .row100 .col .inputBox input:valid ~ .line{
+    height: 100%;
+}
+.container .row100 .col .inputBox.textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.container .row100 .col .inputBox textarea:focus ~ .line,
+.container .row100 .col .inputBox textarea:valid ~ .line{
+    height: 100%;
+}
+.container .row100 .col input[type='submit'] {
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    outline: none;
+    background: white;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 2px;
+}
+.container .row100 .col input[type='submit']:hover{
+    background: #a4730f;
+    color: white;
+}
+footer{
+    font-family: 'Bebas Neue', sans-serif;
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+footer .social_icon,
+footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;   
+}
+footer .social_icon li,
+footer .menu li{
+    list-style: none;
+}
+footer .social_icon li a{
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .menu li a{
+    font-size: 1.4em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s; 
+    text-decoration: none;
+    opacity: 0.65;
+}
+footer .social_icon li a:hover{
+    transform: translateY(-10px)
+}
+footer .menu li a:hover{
+    opacity: 1;
+}
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(./wave.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 8s linear infinite;
+}
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_2 8s linear infinite;
+}
+footer .wave#wave3{
+    z-index: 998;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 4s linear infinite;
+}
+footer .wave#wave4{
+    z-index: 997;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_2 4s linear infinite;
+}
+@keyframes animateWave{
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+@keyframes animateWave_2{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+@media (max-width: 768px)
+{
+.container{
+    padding: 20px;
+}
+.container h2{
+    font-size: 28px;
+}
+.navbar{
+    visibility: hidden;
+}
+.logo{
+    position: absolute;
+    left: 23%;
+}
+}
